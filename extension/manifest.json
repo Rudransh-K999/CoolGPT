@@ -10,9 +10,5 @@
       "css": ["theme.css"],
       "js": ["content.js"]
     }
-  ],
-  "icons": {
-    "48": "icon48.png",
-    "128": "icon128.png"
-  }
+  ]
 }

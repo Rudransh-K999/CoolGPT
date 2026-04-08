@@ -207,7 +207,8 @@ export default function App() {
                  1. Download the <code className="text-[#00f2ff]">/extension</code> folder.<br/>
                  2. Open Chrome Extensions page.<br/>
                  3. Enable "Developer mode".<br/>
-                 4. Click "Load unpacked" and select the folder.
+                 4. Click "Load unpacked" and select the folder.<br/>
+                 <span className="text-[#00f2ff]">Note: No build step required.</span>
                </p>
              </motion.div>
           </div>
