@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Starship Cockpit: ChatGPT Theme",
+  "version": "1.0",
+  "description": "Transforms ChatGPT into a futuristic space-themed cockpit.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "css": ["theme.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
