@@ -1,34 +1,33 @@
-/* Starship Cockpit: ChatGPT Theme */
+/* CoolGPT: High-Tech Theme */
 
 :root {
-  /* Core Cockpit Colors */
-  --cockpit-bg: #0a0b0e;
-  --cockpit-panel: #151921;
-  --cockpit-border: #2a313d;
-  --cockpit-accent-cyan: #00f2ff;
-  --cockpit-accent-orange: #ff9d00;
-  --cockpit-accent-red: #ff3c3c;
-  --cockpit-text: #e0e6ed;
-  --cockpit-text-dim: #8b9bb4;
+  /* Core Tech Colors */
+  --cool-bg: #0a0b0e;
+  --cool-panel: #151921;
+  --cool-border: #2a313d;
+  --cool-accent-cyan: #00f2ff;
+  --cool-accent-orange: #ff9d00;
+  --cool-accent-red: #ff3c3c;
+  --cool-text: #e0e6ed;
+  --cool-text-dim: #8b9bb4;
   
   /* Override ChatGPT Variables */
-  --main-surface-primary: var(--cockpit-bg);
-  --main-surface-secondary: var(--cockpit-panel);
+  --main-surface-primary: var(--cool-bg);
+  --main-surface-secondary: var(--cool-panel);
   --main-surface-tertiary: #1c222d;
   
-  --text-primary: var(--cockpit-text);
-  --text-secondary: var(--cockpit-text-dim);
+  --text-primary: var(--cool-text);
+  --text-secondary: var(--cool-text-dim);
   
-  --border-light: var(--cockpit-border);
+  --border-light: var(--cool-border);
   --border-medium: #3a4455;
 }
 
-/* Global Cockpit Aesthetic */
+/* Global Tech Aesthetic */
 body {
-  background-color: var(--cockpit-bg) !important;
-  color: var(--cockpit-text) !important;
+  background-color: var(--cool-bg) !important;
+  color: var(--cool-text) !important;
   font-family: 'JetBrains Mono', 'Roboto Mono', monospace !important;
-  overflow-x: hidden;
 }
 
 /* HUD Overlay: Scanlines and Vignette */
@@ -45,28 +44,16 @@ body::before {
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.3;
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, transparent 60%, rgba(0, 0, 0, 0.4) 100%);
-  pointer-events: none;
-  z-index: 9998;
+  opacity: 0.2;
 }
 
 /* Sidebar / Navigation */
 [data-testid="sidebar"] {
-  background-color: var(--cockpit-panel) !important;
-  border-right: 1px solid var(--cockpit-border) !important;
+  background-color: var(--cool-panel) !important;
+  border-right: 1px solid var(--cool-border) !important;
 }
 
-/* Buttons: Cockpit Switches */
+/* Buttons: Tech Switches */
 button {
   border-radius: 4px !important;
   text-transform: uppercase !important;
@@ -76,70 +63,81 @@ button {
 }
 
 button.bg-black, button.bg-token-main-surface-primary {
-  background-color: var(--cockpit-panel) !important;
-  border: 1px solid var(--cockpit-accent-cyan) !important;
-  color: var(--cockpit-accent-cyan) !important;
+  background-color: var(--cool-panel) !important;
+  border: 1px solid var(--cool-accent-cyan) !important;
+  color: var(--cool-accent-cyan) !important;
   box-shadow: 0 0 5px rgba(0, 242, 255, 0.2) !important;
 }
 
 button:hover {
   box-shadow: 0 0 15px rgba(0, 242, 255, 0.4) !important;
-  transform: translateY(-1px) !important;
 }
 
 /* Chat Bubbles */
-.prose {
-  color: var(--cockpit-text) !important;
-}
-
 .bg-token-main-surface-secondary {
-  background-color: var(--cockpit-panel) !important;
-  border: 1px solid var(--cockpit-border) !important;
-  border-left: 4px solid var(--cockpit-accent-cyan) !important;
+  background-color: var(--cool-panel) !important;
+  border: 1px solid var(--cool-border) !important;
+  border-left: 4px solid var(--cool-accent-cyan) !important;
 }
 
 /* User Message */
 .bg-token-main-surface-tertiary {
   background-color: #1c222d !important;
-  border: 1px solid var(--cockpit-border) !important;
-  border-right: 4px solid var(--cockpit-accent-orange) !important;
+  border: 1px solid var(--cool-border) !important;
+  border-right: 4px solid var(--cool-accent-orange) !important;
 }
 
 /* Input Area */
 #prompt-textarea {
   background-color: #0d1117 !important;
-  border: 1px solid var(--cockpit-border) !important;
-  color: var(--cockpit-accent-cyan) !important;
-  font-family: 'JetBrains Mono', monospace !important;
+  border: 1px solid var(--cool-border) !important;
+  color: var(--cool-accent-cyan) !important;
 }
 
-#prompt-textarea:focus {
-  border-color: var(--cockpit-accent-cyan) !important;
-  box-shadow: 0 0 10px rgba(0, 242, 255, 0.2) !important;
+/* Custom UI Elements */
+.cool-settings-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10001;
+  background: var(--cool-panel);
+  border: 1px solid var(--cool-accent-cyan);
+  color: var(--cool-accent-cyan);
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
 }
 
-/* Scrollbars */
-::-webkit-scrollbar {
-  width: 8px;
+.cool-delete-btn {
+  background: var(--cool-accent-red) !important;
+  color: white !important;
+  border: none !important;
+  padding: 4px 8px !important;
+  font-size: 10px !important;
+  margin-left: 10px !important;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--cockpit-bg);
+.cool-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--cool-panel);
+  border: 2px solid var(--cool-accent-cyan);
+  padding: 20px;
+  z-index: 10002;
+  box-shadow: 0 0 30px rgba(0, 242, 255, 0.3);
+  min-width: 300px;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--cockpit-border);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--cockpit-accent-cyan);
-}
-
-/* Custom Cockpit Elements (Injected via JS) */
-.cockpit-hud-label {
-  font-size: 10px;
-  color: var(--cockpit-accent-cyan);
-  opacity: 0.6;
-  text-transform: uppercase;
+.cool-modal input {
+  background: #0d1117;
+  border: 1px solid var(--cool-border);
+  color: var(--cool-accent-cyan);
+  padding: 8px;
+  width: 100%;
+  margin: 10px 0;
 }
